@@ -1,0 +1,27 @@
+.quizz {
+    background-color: #99BF7E;
+    border: solid 2px #0D0D0D;
+    padding: 10px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    min-width: 45em;
+
+    .title {
+        font-weight: bolder;
+    }
+    
+    .title, .description {
+        text-align: center;
+    }
+    
+    .title::first-letter, .description::first-letter {
+        text-transform: uppercase;
+    }
+
+    app-quizz-image {
+        margin: auto;
+        display: block;
+    }
+}
+
+
