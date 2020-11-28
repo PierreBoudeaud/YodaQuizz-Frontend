@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quizz } from 'src/app/core/models/quizz';
 
 @Component({
@@ -10,7 +10,13 @@ export class InfoQuizzComponent implements OnInit {
   @Input()
   public quizz!: Quizz;
 
+  @Output()
+  public showQuizzEvent: EventEmitter<string> = new EventEmitter<string>();
+
   ngOnInit(): void {
   }
 
+  showQuizz(): void {
+    this.showQuizzEvent.emit(this.quizz.id);
+  }
 }

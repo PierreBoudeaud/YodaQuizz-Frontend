@@ -1,16 +1,21 @@
 .quizz {
-    background-color: #99BF7E;
+    background-color: #02734A;
     border: solid 2px #0D0D0D;
     padding: 10px;
     margin: 10px 5px;
     border-radius: 5px;
     min-width: 45em;
+    cursor: pointer;
 
     .title {
         font-weight: bolder;
     }
+
+    .creator {
+        font-style: italic;
+    }
     
-    .title, .description {
+    .title, .description, .creator {
         text-align: center;
     }
     

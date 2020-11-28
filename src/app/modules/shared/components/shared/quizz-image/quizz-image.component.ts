@@ -23,6 +23,7 @@ export class QuizzImageComponent implements OnInit {
 
   ngOnInit(): void {
     this.quizz$ = this.quizzService.getById(this.quizzId);
+    this.quizz$.subscribe(quizz => console.log(quizz));
   }
 
 }

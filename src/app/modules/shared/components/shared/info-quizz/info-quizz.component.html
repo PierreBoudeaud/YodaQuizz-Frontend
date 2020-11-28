@@ -1,5 +1,7 @@
-<div class="quizz">
-    <p class="title">{{ quizz?.nom }}</p>
+<div class="quizz" (click)="showQuizz()">
+    <p class="title">{{ quizz?.nom }} {{ quizz?.valid ? '' : '(Édition en cours)' }}</p>
+    <p class="creator">Crée par {{ quizz?.createur?.nom }}</p>
     <p class="description">{{ quizz?.description }}</p>
     <app-quizz-image [quizzId]="quizz.id"></app-quizz-image>
+    <app-quizz-difficulty [quizz]="quizz"></app-quizz-difficulty>
 </div>
